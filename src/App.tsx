@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "../theme.ts";
+import { Routes, Route } from "react-router-dom";
+import LandingPage from "./components/LandingPage.tsx";
+import HomeOwner from "./components/HomeOwner.tsx";
+import { HomeOwnerProvider } from "./context/HomeOwnerContext.tsx";
+import MaintenanceSetup from "./components/MaintenanceSetup.tsx";
+import MaintenanceDashboard from "./components/MaintenanceDashboard.tsx";
+import TechnicianList from "./components/TechnicianList.tsx";
+import BookingPage from "./components/BookingPage.tsx";
+import Notifications from "./components/Notifications.tsx";
+import HomeOwnerProfile from "./components/HomeOwnerProfile.tsx";
+import CalendarPage from "./components/MaintenanceCalendar.tsx";
+import SystemSizeSubscription from "./components/SystemSizeSubscription.tsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <ThemeProvider theme={theme}>
+      <HomeOwnerProvider>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/homeowner" element={<HomeOwner />} />
+          <Route path="/technician" element={<LandingPage />} />
+          <Route
+            path="/homeowner/maintenanceSetup"
+            element={<MaintenanceSetup />}
+          />
+          <Route
+            path="/homeowner/maintenanceDashboard"
+            element={<MaintenanceDashboard />}
+          />
+          <Route path="/homeowner/technicians" element={<TechnicianList />} />
+          <Route path="/homeowner/booking" element={<BookingPage />} />
+          <Route path="/homeowner/notifications" element={<Notifications />} />
+          <Route path="/homeowner/profile" element={<HomeOwnerProfile />} />
+          <Route path="/homeowner/calendar" element={<CalendarPage />} />
+          <Route
+            path="/homeowner/systemSizeSubscription"
+            element={<SystemSizeSubscription />}
+          />
+        </Routes>
+      </HomeOwnerProvider>
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;

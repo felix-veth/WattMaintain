@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 484.45 537.49">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #dee48b;
+      }
+
+      .cls-1, .cls-3 {
+        font-family: Arial-Black, 'Arial Black';
+        font-size: 200px;
+        font-weight: 800;
+      }
+
+      .cls-4, .cls-3 {
+        fill: #21554d;
+      }
+    </style>
+  </defs>
+  <g id="Calque_3" data-name="Calque 3">
+    <g id="Calque_4" data-name="Calque 4">
+      <rect class="cls-4" x="34.86" y="47.18" width="400.46" height="400.46" rx="54.18" ry="54.18"/>
+    </g>
+    <path class="cls-2" d="M237.4,265.13c-92.46,0-171.22,58.67-201.08,140.81,5.64,23.91,27.09,41.71,52.72,41.71h292.09c28.6,0,52-22.16,54.02-50.24-32.08-77.64-108.53-132.27-197.76-132.27Z"/>
+  </g>
+  <g id="Calque_6" data-name="Calque 6">
+    <text class="cls-1" transform="translate(139.65 236.92)"><tspan x="0" y="0">W</tspan></text>
+    <text class="cls-3" transform="translate(145.26 447.94)"><tspan x="0" y="0">M</tspan></text>
+  </g>
+</svg>
